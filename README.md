@@ -52,17 +52,17 @@ const [value, setValue] = useState(); // Give these better names, and decide whe
 
 ### STEP 3 - Render the Scores to the DOM
 
-- [ ] The scores in the JSX are currently hardcoded to 32 points each. Remove the hardcoded values
-- [ ] Render the state values from what we just set up in steps 1 and 2
-- [ ] Play around with different initial values to test if they are rendering on the DOM correctly
+- [0] The scores in the JSX are currently hardcoded to 32 points each. Remove the hardcoded values
+- [0] Render the state values from what we just set up in steps 1 and 2
+- [0] Play around with different initial values to test if they are rendering on the DOM correctly
 
 ### STEP 4 - Add Click Functionality to Increment the Scores
 
-- [ ] Add the `onClick` handler to each function
-- [ ] Determine how much you will need to increment the score for each button
-  - [ ] A touchdown is worth 7 points (assume the following extra point is made)
-  - [ ] A field goal is worth 3 points
-- [ ] Inside the click handlers on each button, use the setter functions for each team to increment the appropriate team's score by the correct amount.
+- [0] Add the `onClick` handler to each function
+- [0] Determine how much you will need to increment the score for each button
+  - [0] A touchdown is worth 7 points (assume the following extra point is made)
+  - [0] A field goal is worth 3 points
+- [0] Inside the click handlers on each button, use the setter functions for each team to increment the appropriate team's score by the correct amount.
 
 ## Stretch Problems
 
@@ -71,7 +71,7 @@ After finishing your required elements, you can push your work further. These go
 ### Stretch Goal 1
 
 - [ ] Break out parts of App component into smaller components and compose multiple components together to make the UI
-- [ ] Write a "handler" function in App component that takes in a team name and an amount. This function will then be passed to each button's click handler. It will increment the correct team's score by the passed in amount
+- [0] Write a "handler" function in App component that takes in a team name and an amount. This function will then be passed to each button's click handler. It will increment the correct team's score by the passed in amount
 - [ ] Play around with the styling and make this project your own! Maybe make it a soccer (non-American football) scoreboard, or a rugby or baseball scoreboard
 - [ ] Add a button that changes which quarter the game is in, and then render the state quarter value on the scoreboard
 - [ ] Make the entire board fully functional with buttons and state! (If you want to make a timer, you'll have to look into useEffect)

@@ -5,9 +5,22 @@ import "./App.css";
 
 function App() {
   //TODO: STEP 2 - Establish your applictaion's state with some useState hooks.  You'll need one for the home score and another for the away score.
-  let [lionScore, setLionScore] = useState(12);
-  let [tigerScore, setTigerScore] = useState(33);
-  console.log(setTigerScore);
+  const [lionScore, setLionScore] = useState(12);
+  const [tigerScore, setTigerScore] = useState(33);
+  function handleClick(e) {
+    // setLionScore(state => state + 7);
+    // console.log(e.target.name);
+    switch (e.target.name) {
+      case "touchdown": setLionScore(state => state + 7);
+      break;
+      case "fieldgoal": setLionScore(state => state + 3);
+        
+        break;
+    
+      default:
+        break;
+    }
+  }
   return (
     <div className="container">
       <section className="scoreboard">
@@ -30,18 +43,14 @@ function App() {
         <div className="homeButtons">
 
           {/* TODO STEP 4 - Now we need to attach our state setter functions to click listeners. */}
-          <button onClick={() => {
-            setLionScore(lionScore + 7);
-          }} className="homeButtons__touchdown">Home Touchdown</button>
-          <button onClick={() => {
-            setLionScore(lionScore + 3);
-          }} className="homeButtons__fieldGoal">Home Field Goal</button>
+          <button name="touchdown" onClick={handleClick} className="homeButtons__touchdown">Home Touchdown</button>
+          <button name="fieldgoal" onClick={handleClick} className="homeButtons__fieldGoal">Home Field Goal</button>
         </div>
         <div className="awayButtons">
-          <button onClick={() => {
+          <button name="touchdown" onClick={() => {
             setTigerScore(tigerScore + 7);
           }} className="awayButtons__touchdown">Away Touchdown</button>
-          <button onClick={() => {
+          <button name="fieldgoal" onClick={() => {
             setTigerScore(tigerScore + 3);
           }} className="awayButtons__fieldGoal">Away Field Goal</button>
         </div>
